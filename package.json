@@ -18,8 +18,11 @@
     "dependencies": {
         "botbuilder": "~4.6.0",
         "botbuilder-ai": "^4.6.2",
+        "botbuilder-dialogs": "^4.6.2",
         "dotenv": "^8.2.0",
-        "restify": "~8.4.0"
+        "request": "^2.88.0",
+        "restify": "~8.4.0",
+        "xmlhttprequest": "^1.8.0"
     },
     "devDependencies": {
         "eslint": "^6.6.0",

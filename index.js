@@ -7,7 +7,7 @@ const path = require('path');
 
 // Import required bot services.
 // See https://aka.ms/bot-services to learn more about the different parts of a bot.
-const { BotFrameworkAdapter } = require('botbuilder');
+const { BotFrameworkAdapter} = require('botbuilder');
 
 // This bot's main dialog.
 const { EmptyBot } = require('./bots/bot');
@@ -50,6 +50,7 @@ adapter.onTurnError = async (context, error) => {
     await context.sendActivity('To continue to run this bot, please fix the bot source code.');
 };
 
+ 
 // Create the main dialog.
 const myBot = new DispatchBot();
 

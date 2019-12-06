@@ -3,11 +3,12 @@
 
 const { ActivityHandler } = require('botbuilder');
 const { LuisRecognizer, QnAMaker} = require('botbuilder-ai');
+const { LuisHandler } = require('../luisHandler');
 
 class DispatchBot extends ActivityHandler {
     constructor() {        
         super();
-
+        this.luisHandler = new LuisHandler();
         const dispatchRecognizer = new LuisRecognizer({
             applicationId: process.env.LuisAppId,
             endpointKey: process.env.LuisAPIKey,
@@ -80,7 +81,21 @@ class DispatchBot extends ActivityHandler {
     }
 
     async processLuis(context, luisResult) {
+        console.log('processing luis');
 
+        // Retrieve LUIS result for Process Automation.
+        const result = luisResult.connectedServiceResult;
+        const intent = result.topScoringIntent.intent;
+
+        
+        this.luisHandler.processIntent(context, intent)
+
+        //await context.sendActivity(`Luis top intent ${ intent }.`);
+        //await context.sendActivity(`Luis intents detected:  ${ luisResult.intents.map((intentObj) => intentObj.intent).join('\n\n') }.`);
+
+        //if (luisResult.entities.length > 0) {
+            //await context.sendActivity(`HomeAutomation entities were found in the message: ${ luisResult.entities.map((entityObj) => entityObj.entity).join('\n\n') }.`);
+        //}
     }
 }
 
