@@ -5,7 +5,9 @@ const { ActivityHandler } = require('botbuilder');
 const { LuisRecognizer, QnAMaker} = require('botbuilder-ai');
 
 class DispatchBot extends ActivityHandler {
-    constructor() {
+    constructor() {        
+        super();
+
         const dispatchRecognizer = new LuisRecognizer({
             applicationId: process.env.LuisAppId,
             endpointKey: process.env.LuisAPIKey,
@@ -15,18 +17,17 @@ class DispatchBot extends ActivityHandler {
             includeInstanceData: true
         }, true);
         
-        const qnaMaker = new QnAMaker({
+        this.qnaMaker = new QnAMaker({
             knowledgeBaseId: process.env.QnAKnowledgebaseId,
             endpointKey: process.env.QnAEndpointKey,
             host: process.env.QnAEndpointHostName
         });
-        super();
 
         this.onMembersAdded(async (context, next) => {
             const membersAdded = context.activity.membersAdded;
             for (let cnt = 0; cnt < membersAdded.length; ++cnt) {
                 if (membersAdded[cnt].id !== context.activity.recipient.id) {
-                    await context.sendActivity('Hello world!');
+                    await context.sendActivity('Hello! My Name is Jorbot - How can I help you today?');
                 }
             }
             // By calling next() you ensure that the next BotHandler is run.
@@ -51,13 +52,10 @@ class DispatchBot extends ActivityHandler {
 
     async dispatchToTopIntentAsync(context, intent, recognizerResult) {
         switch (intent) {
-        case 'l_HomeAutomation':
-            await this.processHomeAutomation(context, recognizerResult.luisResult);
+        case 'rbaLUIS':
+            await this.processLuis(context, recognizerResult.luisResult);
             break;
-        case 'l_Weather':
-            await this.processWeather(context, recognizerResult.luisResult);
-            break;
-        case 'q_sample-qna':
+        case 'rbaQnA':
             await this.processSampleQnA(context);
             break;
         default:
@@ -65,6 +63,24 @@ class DispatchBot extends ActivityHandler {
             await context.sendActivity(`Dispatch unrecognized intent: ${ intent }.`);
             break;
         }
+    }
+
+    async processSampleQnA(context) {
+        const qnaResults = await this.qnaMaker.getAnswers(context);
+
+		// If an answer was received from QnA Maker, send the answer back to the user.
+		if (qnaResults[0]) {
+			await context.sendActivity(`${ qnaResults[0].answer}`);
+		}
+		else {
+			// If no answers were returned from QnA Maker, reply with help.
+			await context.sendActivity(`I'm sorry. I didn't quite understand that.`
+				+ ` Please try again.`);
+        }
+    }
+
+    async processLuis(context, luisResult) {
+
     }
 }
 
