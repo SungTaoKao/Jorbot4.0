@@ -1,0 +1,88 @@
+﻿{
+  "luis_schema_version": "3.2.0",
+  "versionId": "Dispatch",
+  "name": "jorbotDispatch",
+  "desc": "Dispatch model for jorbotDispatch",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "rbaLUIS"
+    },
+    {
+      "name": "rbaQnA"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "when are the next auctions",
+      "intent": "rbaLUIS",
+      "entities": []
+    },
+    {
+      "text": "when is the next sale",
+      "intent": "rbaLUIS",
+      "entities": []
+    },
+    {
+      "text": "when is the next auction",
+      "intent": "rbaLUIS",
+      "entities": []
+    },
+    {
+      "text": "i want to bid online",
+      "intent": "rbaQnA",
+      "entities": []
+    },
+    {
+      "text": "how to bid online",
+      "intent": "rbaQnA",
+      "entities": []
+    },
+    {
+      "text": "hello",
+      "intent": "rbaQnA",
+      "entities": []
+    },
+    {
+      "text": "where can i register",
+      "intent": "rbaQnA",
+      "entities": []
+    },
+    {
+      "text": "what is your name",
+      "intent": "rbaQnA",
+      "entities": []
+    },
+    {
+      "text": "how to register to bid online",
+      "intent": "rbaQnA",
+      "entities": []
+    },
+    {
+      "text": "i need to register for online bidding",
+      "intent": "rbaQnA",
+      "entities": []
+    },
+    {
+      "text": "hi",
+      "intent": "rbaQnA",
+      "entities": []
+    }
+  ],
+  "settings": [
+    {
+      "name": "NormalizeDiacritics",
+      "value": "true"
+    }
+  ]
+}

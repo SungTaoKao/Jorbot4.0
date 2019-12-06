@@ -1,0 +1,38 @@
+{
+  "authoringRegion": "westus",
+  "hierarchical": true,
+  "useAllTrainingData": false,
+  "dontReviseUtterance": false,
+  "copyLuisData": true,
+  "normalizeDiacritics": true,
+  "services": [
+    {
+      "intentName": "rbaLUIS",
+      "appId": "557f4654-7290-40c8-867d-9c0d66af1e94",
+      "authoringKey": "738d4b138b8e45369b35818593bffb24",
+      "version": "0.1",
+      "region": "westus",
+      "type": "luis",
+      "name": "RBAHackathon",
+      "id": "1"
+    },
+    {
+      "intentName": "rbaQnA",
+      "kbId": "9f43afe0-c61a-4e80-ad3d-a9968067e9de",
+      "subscriptionKey": "b9db6cb378124cc3b86263cdbf91d2c0",
+      "type": "qna",
+      "name": "Hackathon2019",
+      "id": "2"
+    }
+  ],
+  "serviceIds": [
+    "1",
+    "2"
+  ],
+  "appId": "5b36d4c3-75d3-4f6a-9aac-5b063124eda9",
+  "authoringKey": "738d4b138b8e45369b35818593bffb24",
+  "version": "Dispatch",
+  "region": "westus",
+  "type": "dispatch",
+  "name": "jorbotDispatch"
+}

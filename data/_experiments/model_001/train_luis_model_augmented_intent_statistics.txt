@@ -1,0 +1,4 @@
+No	Intent	Utterance Count	Utterance Average Length	Utterance Maximum Length	Utterance Minimum Length	Utterance Length StdDev
+0	rbaLUIS	3	23.66667	26	21	2.51661
+1	rbaQnA	8	18.375	37	2	11.4385
+ 	__ALL__	11	19.81818	37	2	9.94805

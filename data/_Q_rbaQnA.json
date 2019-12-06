@@ -1,0 +1,76 @@
+{
+  "qnaDocuments": [
+    {
+      "id": 1,
+      "answer": "My name is Jordan",
+      "source": "Editorial",
+      "questions": [
+        "What is your name?"
+      ],
+      "metadata": [],
+      "alternateQuestions": "",
+      "alternateQuestionClusters": [],
+      "changeStatus": "NoChange",
+      "kbId": "9f43afe0-c61a-4e80-ad3d-a9968067e9de",
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    },
+    {
+      "id": 2,
+      "answer": "Hello. How can I help you today?",
+      "source": "Editorial",
+      "questions": [
+        "Hello",
+        "Hi"
+      ],
+      "metadata": [],
+      "alternateQuestions": "",
+      "alternateQuestionClusters": [],
+      "changeStatus": "NoChange",
+      "kbId": "9f43afe0-c61a-4e80-ad3d-a9968067e9de",
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    },
+    {
+      "id": 3,
+      "answer": "At the registration desk.",
+      "source": "Editorial",
+      "questions": [
+        "Where can I register?"
+      ],
+      "metadata": [],
+      "alternateQuestions": "",
+      "alternateQuestionClusters": [],
+      "changeStatus": "Update",
+      "kbId": "9f43afe0-c61a-4e80-ad3d-a9968067e9de",
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    },
+    {
+      "id": 4,
+      "answer": "[https://www.rbauction.com/buying/how-to-buy/online](https://www.rbauction.com/buying/how-to-buy/online)",
+      "source": "Editorial",
+      "questions": [
+        "how to bid online",
+        "how to register to bid online",
+        "i want to bid online",
+        "i need to register for online bidding"
+      ],
+      "metadata": [],
+      "alternateQuestions": "",
+      "alternateQuestionClusters": [],
+      "changeStatus": "Update",
+      "kbId": "9f43afe0-c61a-4e80-ad3d-a9968067e9de",
+      "context": {
+        "isContextOnly": false,
+        "prompts": []
+      }
+    }
+  ]
+}

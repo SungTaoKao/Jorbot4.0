@@ -1,0 +1,4 @@
+Label	Weight	Text
+rbaLUIS	1	when is the next auction
+rbaQnA	1	i need to register for online bidding
+rbaQnA	1	Hi

@@ -1,0 +1,4 @@
+Label	Weight	Text
+rbaLUIS	1	when is the next sale
+rbaQnA	1	Hello
+rbaQnA	1	Where can I register

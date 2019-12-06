@@ -1,0 +1,43 @@
+{
+  "luis_schema_version": "4.0.0",
+  "versionId": "0.1",
+  "name": "RBAHackathon",
+  "desc": "RBA-Jorbot-HackathonApp",
+  "culture": "en-us",
+  "tokenizerVersion": "1.0.0",
+  "intents": [
+    {
+      "name": "None"
+    },
+    {
+      "name": "search-auctions"
+    }
+  ],
+  "entities": [],
+  "composites": [],
+  "closedLists": [],
+  "patternAnyEntities": [],
+  "regex_entities": [],
+  "prebuiltEntities": [],
+  "model_features": [],
+  "regex_features": [],
+  "patterns": [],
+  "utterances": [
+    {
+      "text": "when are the next auctions?",
+      "intent": "search-auctions",
+      "entities": []
+    },
+    {
+      "text": "when is the next auction?",
+      "intent": "search-auctions",
+      "entities": []
+    },
+    {
+      "text": "when is the next sale?",
+      "intent": "search-auctions",
+      "entities": []
+    }
+  ],
+  "settings": []
+}
